@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+	<wb-module deploy-name="GradleWebHelloWorld">
+		<property name="context-root" value="GradleWebHelloWorld"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="src"/>
+		<wb-resource deploy-path="/" source-path="WebContent"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Dipanshu/.gradle/caches/modules-2/files-2.1/com.sun.jersey/jersey-core/1.13/4326a56dc6b2d67b7313905c353e1af225bb164f/jersey-core-1.13.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Dipanshu/.gradle/caches/modules-2/files-2.1/junit/junit/4.4/8f35ee1f35d2dadbb5029991449ee90c1bab4d4a/junit-4.4.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Dipanshu/.gradle/caches/modules-2/files-2.1/com.sun.jersey/jersey-servlet/1.13/2e45e281002391865525c4bf0e525887dcd22341/jersey-servlet-1.13.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Dipanshu/.gradle/caches/modules-2/files-2.1/asm/asm/3.1/c157def142714c544bdea2e6144645702adf7097/asm-3.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Dipanshu/.gradle/caches/modules-2/files-2.1/org.mongodb/mongo-java-driver/2.12.2/a45589b995e5f43af112561bd113b6b898879e0f/mongo-java-driver-2.12.2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Dipanshu/.gradle/caches/modules-2/files-2.1/com.sun.jersey/jersey-server/1.13/a83c83bf51fe532e2226a91110f1a2297711c536/jersey-server-1.13.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Dipanshu/.gradle/caches/modules-2/files-2.1/javax.ws.rs/jsr311-api/1.1.1/59033da2a1afd56af1ac576750a8d0b1830d59e6/jsr311-api-1.1.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+	</wb-module>
+</project-modules>

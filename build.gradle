@@ -1,0 +1,84 @@
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'cargo'
+
+eclipse {
+        project {
+            natures 'org.eclipse.wst.common.modulecore.ModuleCoreNature'
+        }
+    }
+
+test {
+    afterTest { desc, result -> 
+        println "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
+    }
+}
+sourceSets{
+main{
+java{ srcDir 'src'}
+resources { srcDir 'src' }
+}
+test{
+java{srcDir 'test'}
+}
+}
+project.webAppDirName = 'WebContent'
+
+repositories {
+    mavenCentral()
+flatDir{
+dirs 'E:/Php_Workspace/libraries/mongo'
+}
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.gradle.api.plugins:gradle-cargo-plugin:1.5'
+    }
+}
+
+dependencies {
+
+
+compile 'junit:junit:4.4'
+    compile "javax.ws.rs:jsr311-api:1.1.1"
+    compile 'com.sun.jersey:jersey-server:1.13'
+    compile 'com.sun.jersey:jersey-core:1.13'
+    compile 'com.sun.jersey:jersey-servlet:1.13'
+  
+    compile 'org.mongodb:mongo-java-driver:2.12.2'
+
+  def cargoVersion = '1.4.5'
+    cargo "org.codehaus.cargo:cargo-core-uberjar:$cargoVersion",
+          "org.codehaus.cargo:cargo-ant:$cargoVersion"
+}
+
+
+cargo {
+    containerId = 'glassfish3x'
+    port = 8080
+
+    deployable {
+        context = 'GradleWebHelloWorld'
+    }
+
+    remote {
+        hostname = 'cloud.internal.it'
+        username = 'superuser'
+        password = 'secretpwd'
+    }
+
+    local {
+        homeDir = file('E:/JAVA/JSF-Devlopement/glassfish-3.1.2/glassfish3')
+       
+        timeout = 60000
+	
+        containerProperties {
+            property 'cargo.glassfish.admin.port', 4848
+        }
+    }
+}
