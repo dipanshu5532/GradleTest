@@ -8,6 +8,6 @@
     	<title>GlassFish JSP Page</title>
   </head>
   <body>
-    <h1>Hello World!updated file</h1>
+    <h1>Hello World!updated file <br> update after confuguration done successfuly</h1>
   </body>
 </html> 
